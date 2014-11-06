@@ -4,13 +4,7 @@
 
 (setq json "{key:value}")
 
-(defun parseJson (json)
-;; Parsing json by tokens
-  (setq result '())
-  (setq tokens (string-to-list json))
-  (dolist (token tokens result)
-    (add-to-list 'result (char-to-string token))))
-(parseJson json)
+(mapcar 'char-to-string (string-to-list json))
 
 ;; Experiment Section
 (setq jar '("hello"))
